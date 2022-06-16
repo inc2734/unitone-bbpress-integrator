@@ -1,0 +1,577 @@
+.entry-content .bbpress-wrapper {
+  max-width: var(--wp--custom--container-max-width);
+
+	> * + * {
+		margin-top: var(--unitone--s1);
+	}
+}
+
+/* ==============================
+ * Forums
+============================== */
+
+// Forums
+.bbp-forums {
+	list-style: none;
+	border: 1px solid var(--wp--preset--color--unitone-light-gray);
+
+	> * + * {
+		border-top: 1px solid var(--wp--preset--color--unitone-light-gray);
+	}
+}
+
+// Header
+.bbp-forums,
+.bbp-topics,
+.bbp-replies,
+.bbp-search-results {
+	> .bbp-header {
+		--unitone--font-size: -1;
+
+		margin: 0;
+		background-color: var(--wp--preset--color--unitone-bright-gray);
+		padding: var(--unitone--s-2) var(--unitone--s-1);
+		display: flex;
+		gap: var(--unitone--s1);
+
+		.forum-titles {
+			flex: 1 1 auto;
+		}
+	}
+}
+
+// Body
+.bbp-body {
+	margin: 0;
+	// padding: var(--unitone--s-1) var(--unitone--s-1);
+}
+
+// Footer
+.bbp-footer {
+	margin: 0;
+	background-color: var(--wp--preset--color--unitone-bright-gray);
+	padding: var(--unitone--s-2) var(--unitone--s-1);
+	display: flex;
+	gap: var(--unitone--s1);
+}
+
+// Forum titles
+// Forum loop
+// Topic loop
+.forum-titles,
+[class*=loop-item-] {
+	list-style: none;
+	display: flex;
+	gap: var(--unitone--s1);
+}
+[class*=loop-item-] {
+	padding: var(--unitone--s-1) var(--unitone--s-1);
+
+	&:not(:first-child) {
+		border-top: 1px solid var(--wp--preset--color--unitone-light-gray);
+	}
+}
+.forum-titles,
+.bbp-forums [class*=loop-item-],
+.bbp-topics [class*=loop-item-] {
+	--unitone--font-size: -1;
+
+	> * {
+		margin: 0;
+	}
+
+	> :first-child {
+		flex: 1 1 61%;
+	}
+
+	> :not(:first-child) {
+		flex: 0 0 13%;
+
+		@media not all and (min-width: 600px) {
+			display: none !important;
+		}
+	}
+
+	.bbp-forum-info {
+		> * + * {
+			margin-top: var(--unitone--s-2);
+		}
+	}
+
+	.bbp-forum-title,
+	.bbp-topic-title > a {
+		--unitone--font-size: 1;
+	}
+
+	.bbp-forum-topic-count,
+	.bbp-forum-reply-count,
+	.bbp-topic-voice-count,
+	.bbp-topic-reply-count {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+/* ==============================
+ * Topics
+============================== */
+
+// Topics
+.bbp-topics {
+	list-style: none;
+	border: 1px solid var(--wp--preset--color--unitone-light-gray);
+
+	> :not(:first-child) {
+		border-top: 1px solid var(--wp--preset--color--unitone-light-gray);
+	}
+}
+
+// Topic title and topic meta
+.bbp-topic-title {
+	display: flex;
+	flex-direction: column;
+	gap: var(--unitone--s-2);
+
+	.bbp-topic-meta {
+		--unitone--font-size: -1;
+
+		flex-wrap: wrap;
+	}
+}
+
+// Topic meta
+.bbp-topic-meta {
+	display: flex;
+	gap: var(--unitone--s-2);
+}
+
+/* ==============================
+ * Replies
+============================== */
+
+// Replies
+.bbp-replies {
+	list-style: none;
+	border: 1px solid var(--wp--preset--color--unitone-light-gray);
+
+	> :not(:first-child) {
+		border-top: 1px solid var(--wp--preset--color--unitone-light-gray);
+	}
+
+	// Avatar
+	.bbp-reply-author {
+		--unitone--font-size: -1;
+
+		flex: 0 0 100px;
+
+		.bbp-author-link {
+			flex-direction: column;
+			gap: 0;
+		}
+	}
+
+	// Content
+	.bbp-reply-content {
+		--unitone--font-size: 0;
+
+		flex: 1 1 calc((var(--unitone--measure) - 100%) * 999);
+	}
+
+	[class*=loop-item-] {
+		flex-wrap: wrap;
+		padding-top: var(--unitone--s1);
+		padding-bottom: var(--unitone--s1);
+	}
+}
+
+// Content
+.bbp-reply-content {
+	> * + * {
+		margin-top: var(--unitone--s1);
+	}
+}
+
+// Reply header (topic meta)
+.bbp-reply-header {
+	--unitone--font-size: -1;
+
+	background-color: var(--wp--preset--color--unitone-bright-gray);
+	padding: var(--unitone--s-1) var(--unitone--s-1);
+
+	&:not(:first-child) {
+		border-top: 1px solid var(--wp--preset--color--unitone-light-gray);
+	}
+}
+
+// Topic meta
+.bbp-meta,
+.bbp-meta > * {
+	display: flex;
+	flex-wrap: wrap;
+}
+.bbp-meta {
+	gap: 0 var(--unitone--s-1);
+}
+.bbp-meta > * {
+	gap: var(--unitone--s-2);
+}
+
+// No replies
+.bbp-no-reply {
+	display: flex;
+	flex-direction: column;
+	gap: var(--unitone--s1);
+}
+
+/* ==============================
+ * Search results
+============================== */
+
+.bbp-search-results {
+	list-style: none;
+	border: 1px solid var(--wp--preset--color--unitone-light-gray);
+
+	> :not(:first-child) {
+		border-top: 1px solid var(--wp--preset--color--unitone-light-gray);
+	}
+
+	// Avatar
+	.bbp-topic-author {
+		--unitone--font-size: -1;
+
+		flex: 0 0 100px;
+
+		.bbp-author-link {
+			flex-direction: column;
+			gap: 0;
+		}
+	}
+
+	// Content
+	.bbp-topic-content {
+		--unitone--font-size: 0;
+
+		flex: 1 1 calc((var(--unitone--measure) - 100%) * 999);
+	}
+
+	[class*=loop-item-] {
+		flex-wrap: wrap;
+		padding-top: var(--unitone--s1);
+		padding-bottom: var(--unitone--s1);
+	}
+
+	.bbp-forum-content,
+	.bbp-topic-content,
+	.bbp-reply-content {
+		--unitone--font-size: 0;
+	}
+}
+
+// Forum header (forum meta)
+// Topic header (topic meta)
+.bbp-forum-header,
+.bbp-topic-header {
+	--unitone--font-size: -1;
+
+	background-color: var(--wp--preset--color--unitone-bright-gray);
+	padding: var(--unitone--s-1) var(--unitone--s-1);
+
+	&:not(:first-child) {
+		border-top: 1px solid var(--wp--preset--color--unitone-light-gray);
+	}
+
+	h3 {
+		--unitone--font-size: 2;
+	}
+}
+
+/* ==============================
+ * User
+============================== */
+
+// Header
+#bbp-single-user-details {
+	display: flex;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	gap: var(--unitone--s1);
+
+	#bbp-user-avatar {
+		flex: 0 0 100px;
+	}
+}
+
+// Navigation
+#bbp-user-navigation {
+	ul {
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--unitone--s-2);
+	}
+
+	li {
+		margin: 0;
+
+		&:not(:first-child) {
+			&::before {
+				content: '/';
+			}
+		}
+	}
+}
+
+// Body
+#bbp-user-body {
+	.bbp-user-section {
+		margin-top: var(--unitone--s1);
+	}
+}
+.bbp-user-profile {
+	display: flex;
+	flex-direction: column;
+	gap: var(--unitone--s1);
+}
+.bbp-user-section {
+	> h3 {
+		--unitone--font-size: 2;
+	}
+
+	> * + * {
+		margin-top: var(--unitone--s-1);
+	}
+}
+
+/* ==============================
+ * User topic started
+============================== */
+
+.bbp-user-topics-started {
+	.bbp-search-form {
+		margin-top: var(--unitone--s1);
+		margin-bottom: var(--unitone--s1);
+	}
+}
+
+/* ==============================
+ * User replies created
+============================== */
+
+.bbp-user-replies-created {
+	.bbp-search-form {
+		margin-top: var(--unitone--s1);
+		margin-bottom: var(--unitone--s1);
+	}
+}
+
+/* ==============================
+ * User engagement
+============================== */
+
+.bbp-user-engagements {
+	.bbp-search-form {
+		margin-top: var(--unitone--s1);
+		margin-bottom: var(--unitone--s1);
+	}
+}
+
+/* ==============================
+ * User favorits
+============================== */
+
+.bbp-user-favorites {
+	.bbp-search-form {
+		margin-top: var(--unitone--s1);
+		margin-bottom: var(--unitone--s1);
+	}
+}
+
+/* ==============================
+ * User subscriptions
+============================== */
+
+.bbp-user-subscriptions {
+	.bbp-search-form {
+		margin-top: var(--unitone--s1);
+		margin-bottom: var(--unitone--s1);
+	}
+}
+
+/* ==============================
+ * Profile edit
+============================== */
+
+#bbp-user-body {
+	#bbp-your-profile {
+		margin-top: var(--unitone--s1);
+	}
+}
+
+// Form
+#bbp-your-profile {
+	margin-top: var(--unitone--s1);
+
+	.entry-title {
+		margin-bottom: var(--unitone--s-2);
+	}
+
+	.entry-title:not(:first-child) {
+		margin-top: var(--unitone--s1);
+	}
+
+	.bbp-form {
+		> div:not([class]) {
+			gap: 0;
+		}
+	}
+
+	fieldset.submit {
+		margin-top: var(--unitone--s1);
+	}
+}
+
+// Password input field
+.bbp-form.password {
+	gap: var(--unitone--s-2);
+}
+.password-input-wrapper {
+	input[type=password] {
+		width: 100%;
+	}
+}
+.password-button-wrapper {
+	display: flex;
+	gap: var(--unitone--s-2);
+
+	> .button {
+		display: inline-flex;
+		align-items: center;
+		gap: calc(var(--unitone--s-2) / 2);
+	}
+}
+
+// Password weak
+.pw-weak {
+	.description {
+		--unitone--font-size: -1;
+	}
+}
+
+#pass-strength-result:empty {
+	display: none !important;
+}
+
+// Save
+fieldset.submit {
+	border: 1px solid var(--wp--preset--color--unitone-light-gray);
+	padding: var(--unitone--s-1) var(--unitone--s1);
+}
+
+/* ==============================
+ * Common
+============================== */
+
+// Heading
+.bbpress-wrapper .entry-title {
+	--unitone--font-size: 2;
+}
+
+// Author link (author name + avatar)
+.bbp-author-link {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--unitone--s-2);
+
+	.bbp-author-avatar {
+		flex: 0 0 auto;
+	}
+}
+
+// Alert
+.bbp-template-notice,
+.bbp-topic-revision-log {
+	list-style: none;
+	border: 1px solid var(--wp--preset--color--unitone-light-gray);
+	border-radius: var(--unitone--global--border-radius);
+	padding: var(--unitone--s-1);
+
+	ul {
+		list-style: none;
+	}
+
+	li {
+		margin: 0;
+	}
+}
+
+// Form
+.bbp-form {
+	border: 1px solid var(--wp--preset--color--unitone-light-gray);
+	padding: var(--unitone--s1);
+	display: flex;
+	flex-direction: column;
+	gap: var(--unitone--s1);
+
+	legend {
+		--unitone--font-size: 1;
+
+		display: flex;
+    align-items: center;
+    gap: var(--unitone--s-2);
+		font-weight: bold;
+    padding: 0 var(--unitone--s-2);
+	}
+
+	> div:not([class]) {
+		display: flex;
+		flex-direction: column;
+		gap: var(--unitone--s-1);
+
+		// Edit log
+		.bbp-form {
+			> div:not([class]) {
+				gap: var(--unitone--s-2);
+
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+// Search box
+#bbp-search-form,
+#bbp-topic-search-form,
+#bbp-reply-search-form {
+	> div {
+		display: flex;
+		gap: var(--unitone--s-2);
+
+		> input[type=text] {
+			flex-grow: 1;
+		}
+	}
+}
+
+// Subscribe button
+// Favorite button
+.subscription-toggle,
+.favorite-toggle {
+	display: inline-block;
+	border: 1px solid var(--wp--preset--color--unitone-light-gray);
+	border-radius: var(--unitone--global--border-radius);
+	padding: calc(var(--unitone--s-2) / 2) var(--unitone--s-2);
+	text-decoration: none;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: var(--wp--preset--color--unitone-bright-gray);
+	}
+}
+
+// Pagination
+.bbp-pagination-links:empty {
+	display: none;
+}
