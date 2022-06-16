@@ -61,7 +61,7 @@ add_filter(
 		function unitone_bbpress_integrator_breadcrumbs_topic_edit( $breadcrumbs ) {
 			$breadcrumbs   = unitone_bbpress_integrator_beradcrumbs_single_topic( $breadcrumbs );
 			$breadcrumbs[] = array(
-				'title' => __( 'Edit this topic', 'snow-monkey-bbpress-support' ),
+				'title' => __( 'Edit this topic', 'unitone-bbpress-integrator' ),
 				'link'  => bbp_get_topic_edit_url( get_the_ID() ),
 			);
 
@@ -83,7 +83,7 @@ add_filter(
 			$breadcrumbs[] = array(
 				'title' => sprintf(
 					/* translators: 1: Search terms */
-					__( 'Search results of "%1$s"', 'snow-monkey-bbpress-support' ),
+					__( 'Search results of "%1$s"', 'unitone-bbpress-integrator' ),
 					bbp_get_search_terms()
 				),
 				'link'  => '',
@@ -210,7 +210,7 @@ add_filter(
 			);
 
 			$breadcrumbs[] = array(
-				'title' => __( 'Topics with no replies', 'snow-monkey-bbpress-support' ),
+				'title' => __( 'Topics with no replies', 'unitone-bbpress-integrator' ),
 				'link'  => bbp_get_view_url( 'no-replies' ),
 			);
 
@@ -230,7 +230,7 @@ add_filter(
 			);
 
 			$breadcrumbs[] = array(
-				'title' => __( 'Popular Topics', 'snow-monkey-bbpress-support' ),
+				'title' => __( 'Popular Topics', 'unitone-bbpress-integrator' ),
 				'link'  => bbp_get_view_url( 'popular' ),
 			);
 
