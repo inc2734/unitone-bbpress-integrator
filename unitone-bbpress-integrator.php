@@ -19,8 +19,6 @@
 
 namespace UnitoneBbpressIntegrator;
 
-use Inc2734\WP_GitHub_Plugin_Updater\Bootstrap as Updater;
-
 define( 'UNITONE_BBPRESS_INTEGRATOR_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 define( 'UNITONE_BBPRESS_INTEGRATOR_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 
@@ -39,7 +37,7 @@ class Bootstrap {
 	public function _bootstrap() {
 		load_plugin_textdomain( 'unitone-bbpress-integrator', false, basename( __DIR__ ) . '/languages' );
 
-		add_action( 'init', [ $this, '_activate_autoupdate' ] );
+		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/updater.php';
 
 		$theme = wp_get_theme( get_template() );
 		if ( 'unitone' !== $theme->template ) {
@@ -78,20 +76,6 @@ class Bootstrap {
 		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/breadcrumbs.php';
 		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/subscribe-button.php';
 		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/tropic-extra-form.php';
-	}
-
-	/**
-	 * Activate auto update using GitHub.
-	 */
-	public function _activate_autoupdate() {
-		new Updater(
-			plugin_basename( __FILE__ ),
-			'inc2734',
-			'unitone-bbpress-integrator',
-			[
-				'homepage' => 'https://unitone.2inc.org',
-			]
-		);
 	}
 }
 
