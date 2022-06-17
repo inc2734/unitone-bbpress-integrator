@@ -14,7 +14,7 @@ add_action(
 		wp_dequeue_style( 'bbp-default' );
 
 		wp_enqueue_style(
-			'unitone/bbpress',
+			'unitone/bbpress-integrator',
 			UNITONE_BBPRESS_INTEGRATOR_URL . '/dist/css/app.css',
 			array(),
 			filemtime( UNITONE_BBPRESS_INTEGRATOR_PATH . '/dist/css/app.css' )
