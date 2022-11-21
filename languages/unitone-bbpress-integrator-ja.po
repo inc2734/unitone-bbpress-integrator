@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: unitone bbPress integrator 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/unitone-bbpress-"
 "integrator\n"
-"POT-Creation-Date: 2022-06-16T07:10:14+00:00\n"
-"PO-Revision-Date: 2022-06-16 16:10+0900\n"
+"POT-Creation-Date: 2022-11-21T11:55:40+00:00\n"
+"PO-Revision-Date: 2022-11-21 21:04+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.2\n"
 "X-Domain: unitone-bbpress-integrator\n"
 
 #. Plugin Name of the plugin
@@ -36,6 +36,35 @@ msgstr "Takashi Kitajima"
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
 
+#: dist/blocks/login/render.php:16 dist/blocks/login/render.php:37
+msgid "Log In"
+msgstr "ログイン"
+
+#: dist/blocks/login/render.php:19
+msgid "Username"
+msgstr "ユーザー名"
+
+#: dist/blocks/login/render.php:24
+msgid "Password"
+msgstr "パスワード"
+
+#: dist/blocks/login/render.php:30
+msgid "Keep me signed in"
+msgstr "ログイン状態を保持"
+
+#: dist/blocks/login/render.php:49
+msgid "Register"
+msgstr "登録"
+
+#: dist/blocks/login/render.php:55
+msgid "Lost Password"
+msgstr "パスワード紛失"
+
+#: dist/blocks/topics/render.php:113
+msgctxt "widgets"
+msgid "by %1$s"
+msgstr "by %1$s"
+
 #: inc/breadcrumbs.php:64
 msgid "Edit this topic"
 msgstr "トピックを編集"
@@ -49,14 +78,142 @@ msgstr "「%1$s」の検索結果"
 msgid "Topics with no replies"
 msgstr "返信がないトピック"
 
-#: inc/breadcrumbs.php:233
+#: inc/breadcrumbs.php:233 dist/blocks/topics/index.js:1
 msgid "Popular Topics"
 msgstr "人気のトピック"
 
-#: unitone-bbpress-integrator.php:52
+#. translators: 1: Topic title
+#: inc/notice.php:35
+msgid "Title: %1$s"
+msgstr "タイトル：%1$s"
+
+#. translators: 1: User name
+#: inc/notice.php:41
+msgid "Owner: %1$s"
+msgstr "投稿者：%1$s"
+
+#. translators: 1: Site name, 2: Topic title
+#: inc/notice.php:51
+msgid "【%1$s】Added new topic - %2$s"
+msgstr "【%1$s】新しいトピック - %2$s"
+
+#. translators: 1: User name
+#: inc/notice.php:86
+msgid "Name: %1$s"
+msgstr "お名前：%1$s"
+
+#. translators: 1: User email
+#: inc/notice.php:92
+msgid "E-mail: %1$s"
+msgstr "eメール：%1$s"
+
+#. translators: 1: Site name, 2: oAuth service name
+#: inc/notice.php:100
+msgid "【%1$s】Added new user using %2$s."
+msgstr "【%1$s】新しいユーザーが%2$s経由で追加されました。"
+
+#: unitone-bbpress-integrator.php:48
 msgid "[unitone bbPress integrator] Needs the unitone."
 msgstr "[unitone bbPress integrator] unitone が必要です。"
 
-#: unitone-bbpress-integrator.php:68
+#: unitone-bbpress-integrator.php:66
 msgid "[unitone bbPress integrator] Needs the bbPress."
 msgstr "[unitone bbPress integrator] bbPress が必要です。"
+
+#: dist/blocks/login/index.js:1 dist/blocks/search/index.js:1
+#: dist/blocks/stats/index.js:1 dist/blocks/topics/index.js:1
+msgid "General"
+msgstr "一般"
+
+#: dist/blocks/login/index.js:1 dist/blocks/search/index.js:1
+#: dist/blocks/stats/index.js:1 dist/blocks/topics/index.js:1
+msgid "Title"
+msgstr "タイトル"
+
+#: dist/blocks/login/index.js:1
+msgid "Register URI"
+msgstr "登録 URL"
+
+#: dist/blocks/login/index.js:1
+msgid "Lost Password URI"
+msgstr "パスワード再発行 URL"
+
+#: dist/blocks/topics/index.js:1
+msgid "Maximum topics to show"
+msgstr "表示するトピックの上限"
+
+#: dist/blocks/topics/index.js:1
+msgid "Parent Forum ID"
+msgstr "親フォーラム ID"
+
+#: dist/blocks/topics/index.js:1
+msgid "\"0\" to show only root - \"any\" to show all"
+msgstr "「0」でルートのみ、「any」ですべてを表示します。"
+
+#: dist/blocks/topics/index.js:1
+msgid "Show post date"
+msgstr "投稿日を表示"
+
+#: dist/blocks/topics/index.js:1
+msgid "Show topic author"
+msgstr "トピック作成者を表示"
+
+#: dist/blocks/topics/index.js:1
+msgid "Order By"
+msgstr "並び順"
+
+#: dist/blocks/topics/index.js:1
+msgid "Default"
+msgstr "デフォルト"
+
+#: dist/blocks/topics/index.js:1
+msgid "Newest Topics"
+msgstr "最新のトピック"
+
+#: dist/blocks/topics/index.js:1
+msgid "Topics With Recent Replies"
+msgstr "最近返信があったトピック"
+
+#: dist/blocks/login/block.json
+msgctxt "block title"
+msgid "(bbPress) Login"
+msgstr "(bbPress) ログイン"
+
+#: dist/blocks/login/block.json
+msgctxt "block description"
+msgid ""
+"A simple login form with optional links to sign-up and lost password pages."
+msgstr ""
+"新規登録およびパスワードリセットページヘのリンクを含むシンプルなログイン"
+"フォーム。"
+
+#: dist/blocks/search/block.json
+msgctxt "block title"
+msgid "(bbPress) Forum Search Form"
+msgstr "(bbPress) フォーラム用検索フォーム"
+
+#: dist/blocks/search/block.json
+msgctxt "block description"
+msgid "The bbPress forum search form."
+msgstr "bbPress フォーラム用の検索フォーム。"
+
+#: dist/blocks/stats/block.json
+msgctxt "block title"
+msgid "(bbPress) Statistics"
+msgstr "(bbPress) 統計情報"
+
+#: dist/blocks/stats/block.json
+msgctxt "block description"
+msgid "Some statistics from your forum."
+msgstr "フォーラム統計情報の一部です。"
+
+#: dist/blocks/topics/block.json
+msgctxt "block title"
+msgid "(bbPress) Recent Topics"
+msgstr "(bbPress) 最近のトピック"
+
+#: dist/blocks/topics/block.json
+msgctxt "block description"
+msgid ""
+"A list of recent topics, sorted by: newness, popularity, or recent replies."
+msgstr "新しい順、人気順、または最新の返信順に並べられた最近のトピック一覧。"

@@ -440,12 +440,6 @@
 .password-button-wrapper {
 	display: flex;
 	gap: var(--unitone--s-2);
-
-	> .button {
-		display: inline-flex;
-		align-items: center;
-		gap: calc(var(--unitone--s-2) / 2);
-	}
 }
 
 // Password weak
@@ -469,6 +463,33 @@ fieldset.submit {
  * Common
 ============================== */
 
+// Button
+.bbpress-wrapper .button,
+[class^="bbp-"] .button,
+.subscription-toggle,
+.favorite-toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: calc(var(--unitone--s-2) / 2);
+	background-color: buttonface;
+	border: 1px solid var(--wp--preset--color--unitone-gray);
+	border-radius: var(--unitone--global--border-radius);
+	color: inherit;
+	padding: calc(var(--unitone--s-2) / 1.5) var(--unitone--s-2);
+	text-decoration: none;
+
+	&:active {
+		border-color: var(--wp--preset--color--unitone-dark-gray);
+	}
+}
+
+// Editor
+.bbp-the-content.wp-editor-area {
+	font-size: inherit;
+	line-height: inherit;
+	padding: calc(var(--unitone--s-1) / 1.5);
+}
+
 // Heading
 .bbpress-wrapper .entry-title {
 	--unitone--font-size: 2;
@@ -478,9 +499,14 @@ fieldset.submit {
 .bbp-author-link {
 	display: inline-flex;
 	gap: var(--unitone--s-2);
+	align-items: center;
 
 	.bbp-author-avatar {
 		flex: 0 0 auto;
+
+		img {
+			display: block;
+		}
 	}
 }
 
@@ -551,24 +577,119 @@ fieldset.submit {
 	}
 }
 
-// Subscribe button
-// Favorite button
-.subscription-toggle,
-.favorite-toggle {
-	display: inline-block;
-	border: 1px solid var(--wp--preset--color--unitone-light-gray);
-	border-radius: var(--unitone--global--border-radius);
-	padding: calc(var(--unitone--s-2) / 2) var(--unitone--s-2);
-	text-decoration: none;
-
-	&:hover,
-	&:active,
-	&:focus {
-		background-color: var(--wp--preset--color--unitone-bright-gray);
-	}
-}
-
 // Pagination
 .bbp-pagination-links:empty {
 	display: none;
+}
+
+/* ==============================
+ * Blocks
+============================== */
+.unitone-bbpress-integrator-login {
+	fieldset {
+		border: none;
+		padding: 0;
+	}
+
+	.bbp-login-form {
+		position: relative;
+
+		label {
+			width: auto;
+		}
+
+		legend {
+			display: none;
+		}
+
+		.bbp-submit-wrapper {
+			overflow: hidden;
+		}
+
+		.bbp-submit-wrapper {
+			float: none;
+		}
+
+		.bbp-login-links {
+			clear: both;
+		}
+
+		#wpg-login {
+			float: left;
+			margin: 0;
+		}
+
+		.bbp-username,
+		.bbp-email,
+		.bbp-password {
+			input {
+				width: 100%;
+			}
+		}
+	}
+
+	.button {
+		float: right;
+	}
+
+	.bbp-logged-in {
+		overflow: hidden;
+
+		.user-submit {
+			display: block;
+			float: left;
+			margin: 0 1em 0 0;
+			border-radius: 0;
+			padding: 0;
+		}
+
+		h4 {
+			overflow: hidden;
+
+			> a {
+				color: inherit;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.unitone-bbpress-integrator-stats {
+	dl {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: var(--unitone--s-2);
+
+		& > dt {
+			flex: 1 1 50%;
+			max-width: 50%;
+		}
+
+		& > dd {
+			flex: 0 0 auto;
+		}
+	}
+}
+
+.unitone-bbpress-integrator-topics {
+	.bbp-topics-widget {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: var(--unitone--s-2);
+	}
+
+	li {
+		--unitone--font-size: -2;
+
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	.bbp-forum-title {
+		--unitone--font-size: 0;
+
+		display: block;
+	}
 }

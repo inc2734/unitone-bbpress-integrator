@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"textdomain": "unitone-bbpress-integrator",
+	"name": "unitone-bbpress-integrator/login",
+	"title": "(bbPress) Login",
+	"description": "A simple login form with optional links to sign-up and lost password pages.",
+	"attributes": {
+		"title": {
+			"type": "string"
+		},
+		"register": {
+			"type": "string"
+		},
+		"lostpass": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"className": false,
+		"anchor": true
+	},
+	"category": "unitone/widget",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

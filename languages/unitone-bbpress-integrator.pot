@@ -2,16 +2,16 @@
 # This file is distributed under the GPL2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: unitone bbPress integrator 0.0.1\n"
+"Project-Id-Version: unitone bbPress integrator 0.0.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/unitone-bbpress-integrator\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-06-16T07:10:14+00:00\n"
+"POT-Creation-Date: 2022-11-21T11:55:40+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.6.0\n"
+"X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: unitone-bbpress-integrator\n"
 
 #. Plugin Name of the plugin
@@ -30,6 +30,36 @@ msgstr ""
 msgid "https://2inc.org"
 msgstr ""
 
+#: dist/blocks/login/render.php:16
+#: dist/blocks/login/render.php:37
+msgid "Log In"
+msgstr ""
+
+#: dist/blocks/login/render.php:19
+msgid "Username"
+msgstr ""
+
+#: dist/blocks/login/render.php:24
+msgid "Password"
+msgstr ""
+
+#: dist/blocks/login/render.php:30
+msgid "Keep me signed in"
+msgstr ""
+
+#: dist/blocks/login/render.php:49
+msgid "Register"
+msgstr ""
+
+#: dist/blocks/login/render.php:55
+msgid "Lost Password"
+msgstr ""
+
+#: dist/blocks/topics/render.php:113
+msgctxt "widgets"
+msgid "by %1$s"
+msgstr ""
+
 #: inc/breadcrumbs.php:64
 msgid "Edit this topic"
 msgstr ""
@@ -44,13 +74,142 @@ msgid "Topics with no replies"
 msgstr ""
 
 #: inc/breadcrumbs.php:233
+#: dist/blocks/topics/index.js:1
 msgid "Popular Topics"
 msgstr ""
 
-#: unitone-bbpress-integrator.php:52
+#. translators: 1: Topic title
+#: inc/notice.php:35
+msgid "Title: %1$s"
+msgstr ""
+
+#. translators: 1: User name
+#: inc/notice.php:41
+msgid "Owner: %1$s"
+msgstr ""
+
+#. translators: 1: Site name, 2: Topic title
+#: inc/notice.php:51
+msgid "【%1$s】Added new topic - %2$s"
+msgstr ""
+
+#. translators: 1: User name
+#: inc/notice.php:86
+msgid "Name: %1$s"
+msgstr ""
+
+#. translators: 1: User email
+#: inc/notice.php:92
+msgid "E-mail: %1$s"
+msgstr ""
+
+#. translators: 1: Site name, 2: oAuth service name
+#: inc/notice.php:100
+msgid "【%1$s】Added new user using %2$s."
+msgstr ""
+
+#: unitone-bbpress-integrator.php:48
 msgid "[unitone bbPress integrator] Needs the unitone."
 msgstr ""
 
-#: unitone-bbpress-integrator.php:68
+#: unitone-bbpress-integrator.php:66
 msgid "[unitone bbPress integrator] Needs the bbPress."
+msgstr ""
+
+#: dist/blocks/login/index.js:1
+#: dist/blocks/search/index.js:1
+#: dist/blocks/stats/index.js:1
+#: dist/blocks/topics/index.js:1
+msgid "General"
+msgstr ""
+
+#: dist/blocks/login/index.js:1
+#: dist/blocks/search/index.js:1
+#: dist/blocks/stats/index.js:1
+#: dist/blocks/topics/index.js:1
+msgid "Title"
+msgstr ""
+
+#: dist/blocks/login/index.js:1
+msgid "Register URI"
+msgstr ""
+
+#: dist/blocks/login/index.js:1
+msgid "Lost Password URI"
+msgstr ""
+
+#: dist/blocks/topics/index.js:1
+msgid "Maximum topics to show"
+msgstr ""
+
+#: dist/blocks/topics/index.js:1
+msgid "Parent Forum ID"
+msgstr ""
+
+#: dist/blocks/topics/index.js:1
+msgid "\"0\" to show only root - \"any\" to show all"
+msgstr ""
+
+#: dist/blocks/topics/index.js:1
+msgid "Show post date"
+msgstr ""
+
+#: dist/blocks/topics/index.js:1
+msgid "Show topic author"
+msgstr ""
+
+#: dist/blocks/topics/index.js:1
+msgid "Order By"
+msgstr ""
+
+#: dist/blocks/topics/index.js:1
+msgid "Default"
+msgstr ""
+
+#: dist/blocks/topics/index.js:1
+msgid "Newest Topics"
+msgstr ""
+
+#: dist/blocks/topics/index.js:1
+msgid "Topics With Recent Replies"
+msgstr ""
+
+#: dist/blocks/login/block.json
+msgctxt "block title"
+msgid "(bbPress) Login"
+msgstr ""
+
+#: dist/blocks/login/block.json
+msgctxt "block description"
+msgid "A simple login form with optional links to sign-up and lost password pages."
+msgstr ""
+
+#: dist/blocks/search/block.json
+msgctxt "block title"
+msgid "(bbPress) Forum Search Form"
+msgstr ""
+
+#: dist/blocks/search/block.json
+msgctxt "block description"
+msgid "The bbPress forum search form."
+msgstr ""
+
+#: dist/blocks/stats/block.json
+msgctxt "block title"
+msgid "(bbPress) Statistics"
+msgstr ""
+
+#: dist/blocks/stats/block.json
+msgctxt "block description"
+msgid "Some statistics from your forum."
+msgstr ""
+
+#: dist/blocks/topics/block.json
+msgctxt "block title"
+msgid "(bbPress) Recent Topics"
+msgstr ""
+
+#: dist/blocks/topics/block.json
+msgctxt "block description"
+msgid "A list of recent topics, sorted by: newness, popularity, or recent replies."
 msgstr ""

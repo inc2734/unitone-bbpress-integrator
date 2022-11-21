@@ -1,0 +1,20 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"textdomain": "unitone-bbpress-integrator",
+	"name": "unitone-bbpress-integrator/stats",
+	"title": "(bbPress) Statistics",
+	"description": "Some statistics from your forum.",
+	"attributes": {
+		"title": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"className": false,
+		"anchor": true
+	},
+	"category": "unitone/widget",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}
