@@ -15,9 +15,9 @@ add_action(
 			plugin_basename( UNITONE_BBPRESS_INTEGRATOR_PATH . '/unitone-bbpress-integrator.php' ),
 			'inc2734',
 			'unitone-bbpress-integrator',
-			[
+			array(
 				'homepage' => 'https://unitone.2inc.org',
-			]
+			)
 		);
 	}
 );
