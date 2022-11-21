@@ -10,7 +10,8 @@
 			"type": "string"
 		},
 		"orderBy": {
-			"type": "string"
+			"type": "string",
+			"default": ""
 		},
 		"parentForum": {
 			"type": "string",
