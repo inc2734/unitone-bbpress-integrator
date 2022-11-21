@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin name: unitone bbPress integrator
- * Version: 0.0.3
- * Tested up to: 6.0
- * Requires at least: 6.0
+ * Version: 0.1.0
+ * Tested up to: 6.1
+ * Requires at least: 6.1
  * Requires PHP: 5.6
  * Description: This plugin makes unitone beautifully display bbPress and adds some features.
  * Author: Takashi Kitajima
