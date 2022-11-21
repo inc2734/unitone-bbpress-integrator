@@ -30,7 +30,7 @@
 
 		margin: 0;
 		background-color: var(--wp--preset--color--unitone-bright-gray);
-		padding: var(--unitone--s-2) var(--unitone--s-1);
+		padding: var(--unitone--s-1) var(--unitone--s1);
 		display: flex;
 		gap: var(--unitone--s1);
 
@@ -50,7 +50,7 @@
 .bbp-footer {
 	margin: 0;
 	background-color: var(--wp--preset--color--unitone-bright-gray);
-	padding: var(--unitone--s-2) var(--unitone--s-1);
+	padding: var(--unitone--s-1) var(--unitone--s1);
 	display: flex;
 	gap: var(--unitone--s1);
 }
@@ -65,7 +65,7 @@
 	gap: var(--unitone--s1);
 }
 [class*=loop-item-] {
-	padding: var(--unitone--s-1) var(--unitone--s-1);
+	padding: var(--unitone--s1);
 
 	&:not(:first-child) {
 		border-top: 1px solid var(--wp--preset--color--unitone-light-gray);
@@ -179,8 +179,6 @@
 
 	[class*=loop-item-] {
 		flex-wrap: wrap;
-		padding-top: var(--unitone--s1);
-		padding-bottom: var(--unitone--s1);
 	}
 }
 
@@ -196,7 +194,7 @@
 	--unitone--font-size: -1;
 
 	background-color: var(--wp--preset--color--unitone-bright-gray);
-	padding: var(--unitone--s-1) var(--unitone--s-1);
+	padding: var(--unitone--s-1) var(--unitone--s1);
 
 	&:not(:first-child) {
 		border-top: 1px solid var(--wp--preset--color--unitone-light-gray);
@@ -479,7 +477,6 @@ fieldset.submit {
 // Author link (author name + avatar)
 .bbp-author-link {
 	display: inline-flex;
-	align-items: center;
 	gap: var(--unitone--s-2);
 
 	.bbp-author-avatar {
