@@ -16,7 +16,7 @@ add_action(
 		wp_enqueue_style(
 			'unitone/bbpress-integrator',
 			UNITONE_BBPRESS_INTEGRATOR_URL . '/dist/css/app.css',
-			array(),
+			array( 'unitone' ),
 			filemtime( UNITONE_BBPRESS_INTEGRATOR_PATH . '/dist/css/app.css' )
 		);
 	}
