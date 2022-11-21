@@ -122,7 +122,13 @@
 
 						<?php if ( ! empty( $author_link ) ) : ?>
 
-							<?php printf( esc_html_x( 'by %1$s', 'widgets', 'unitone-bbpress-integrator' ), '<span class="topic-author">' . $author_link . '</span>' ); ?>
+							<?php
+							printf(
+								// translators: %1$s: Author name
+								esc_html_x( 'by %1$s', 'widgets', 'unitone-bbpress-integrator' ),
+								'<span class="topic-author">' . $author_link . '</span>'
+							);
+							?>
 
 						<?php endif; ?>
 
