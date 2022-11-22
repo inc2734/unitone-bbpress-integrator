@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: unitone bbPress integrator 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/unitone-bbpress-"
 "integrator\n"
-"POT-Creation-Date: 2022-11-21T11:55:40+00:00\n"
-"PO-Revision-Date: 2022-11-21 21:04+0900\n"
+"POT-Creation-Date: 2022-11-22T09:00:37+00:00\n"
+"PO-Revision-Date: 2022-11-22 18:00+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -60,7 +60,7 @@ msgstr "登録"
 msgid "Lost Password"
 msgstr "パスワード紛失"
 
-#: dist/blocks/topics/render.php:113
+#: dist/blocks/topics/render.php:125
 msgctxt "widgets"
 msgid "by %1$s"
 msgstr "by %1$s"
@@ -111,6 +111,14 @@ msgstr "eメール：%1$s"
 #: inc/notice.php:100
 msgid "【%1$s】Added new user using %2$s."
 msgstr "【%1$s】新しいユーザーが%2$s経由で追加されました。"
+
+#: inc/topic-close-link.php:76
+msgid "Close this topic"
+msgstr "トピックを閉じる"
+
+#: inc/topic-close-link.php:77
+msgid "Open this topic"
+msgstr "トピックを開く"
 
 #: unitone-bbpress-integrator.php:48
 msgid "[unitone bbPress integrator] Needs the unitone."
