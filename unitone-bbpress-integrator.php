@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin name: unitone bbPress integrator
- * Version: 0.1.0
+ * Version: 0.2.0
  * Tested up to: 6.1
  * Requires at least: 6.1
  * Requires PHP: 5.6
