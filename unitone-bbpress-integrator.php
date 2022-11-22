@@ -79,6 +79,7 @@ class Bootstrap {
 		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/document-title.php';
 		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/notice.php';
 		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/subscribe-button.php';
+		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/topic-close-link.php';
 		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/tropic-extra-form.php';
 	}
 }

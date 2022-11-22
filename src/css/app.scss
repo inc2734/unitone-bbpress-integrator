@@ -18,6 +18,10 @@
 	> * + * {
 		border-top: 1px solid var(--wp--preset--color--unitone-light-gray);
 	}
+
+	[class*=loop-item-] {
+		padding: var(--unitone--s1);
+	}
 }
 
 // Header
@@ -65,8 +69,6 @@
 	gap: var(--unitone--s1);
 }
 [class*=loop-item-] {
-	padding: var(--unitone--s1);
-
 	&:not(:first-child) {
 		border-top: 1px solid var(--wp--preset--color--unitone-light-gray);
 	}
@@ -103,6 +105,10 @@
 		--unitone--font-size: 1;
 	}
 
+	&.status-closed .bbp-topic-title .bbp-topic-permalink {
+		color: inherit;
+	}
+
 	.bbp-forum-topic-count,
 	.bbp-forum-reply-count,
 	.bbp-topic-voice-count,
@@ -123,6 +129,10 @@
 
 	> :not(:first-child) {
 		border-top: 1px solid var(--wp--preset--color--unitone-light-gray);
+	}
+
+	[class*=loop-item-] {
+		padding: var(--unitone--s1);
 	}
 }
 
@@ -146,11 +156,11 @@
 }
 
 /* ==============================
- * Replies
+ * Replies & Search results
 ============================== */
 
-// Replies
-.bbp-replies {
+.bbp-replies,
+.bbp-search-results {
 	list-style: none;
 	border: 1px solid var(--wp--preset--color--unitone-light-gray);
 
@@ -158,36 +168,39 @@
 		border-top: 1px solid var(--wp--preset--color--unitone-light-gray);
 	}
 
+	// Content
+	.bbp-reply-content,
+	.bbp-topic-content {
+		flex: 1 1 calc((var(--unitone--measure) - 100%) * 999);
+
+		> * + * {
+			margin-top: var(--unitone--s1);
+		}
+	}
+
+	[class*=loop-item-] {
+		flex-wrap: wrap;
+		padding: var(--unitone--s2) var(--unitone--s1);
+	}
+
 	// Avatar
-	.bbp-reply-author {
+	.bbp-reply-author,
+	.bbp-topic-author {
 		--unitone--font-size: -1;
 
 		flex: 0 0 100px;
 
 		.bbp-author-link {
 			flex-direction: column;
+			align-items: flex-start;
 			gap: 0;
 		}
 	}
-
-	// Content
-	.bbp-reply-content {
-		--unitone--font-size: 0;
-
-		flex: 1 1 calc((var(--unitone--measure) - 100%) * 999);
-	}
-
-	[class*=loop-item-] {
-		flex-wrap: wrap;
-	}
 }
 
-// Content
-.bbp-reply-content {
-	> * + * {
-		margin-top: var(--unitone--s1);
-	}
-}
+/* ==============================
+ * Replies
+============================== */
 
 // Reply header (topic meta)
 .bbp-reply-header {
@@ -224,46 +237,6 @@
 /* ==============================
  * Search results
 ============================== */
-
-.bbp-search-results {
-	list-style: none;
-	border: 1px solid var(--wp--preset--color--unitone-light-gray);
-
-	> :not(:first-child) {
-		border-top: 1px solid var(--wp--preset--color--unitone-light-gray);
-	}
-
-	// Avatar
-	.bbp-topic-author {
-		--unitone--font-size: -1;
-
-		flex: 0 0 100px;
-
-		.bbp-author-link {
-			flex-direction: column;
-			gap: 0;
-		}
-	}
-
-	// Content
-	.bbp-topic-content {
-		--unitone--font-size: 0;
-
-		flex: 1 1 calc((var(--unitone--measure) - 100%) * 999);
-	}
-
-	[class*=loop-item-] {
-		flex-wrap: wrap;
-		padding-top: var(--unitone--s1);
-		padding-bottom: var(--unitone--s1);
-	}
-
-	.bbp-forum-content,
-	.bbp-topic-content,
-	.bbp-reply-content {
-		--unitone--font-size: 0;
-	}
-}
 
 // Forum header (forum meta)
 // Topic header (topic meta)
@@ -471,7 +444,7 @@ fieldset.submit {
 	display: inline-flex;
 	align-items: center;
 	gap: calc(var(--unitone--s-2) / 2);
-	background-color: buttonface;
+	background-color: var(--wp--preset--color--unitone-bright-gray);
 	border: 1px solid var(--wp--preset--color--unitone-gray);
 	border-radius: var(--unitone--global--border-radius);
 	color: inherit;
@@ -514,8 +487,10 @@ fieldset.submit {
 .bbp-template-notice,
 .bbp-topic-revision-log {
 	list-style: none;
-	border: 1px solid var(--wp--preset--color--unitone-light-gray);
+	background-color: #f0f8ff;
+	border: 1px solid #8ac8ff;
 	border-radius: var(--unitone--global--border-radius);
+	color: var(--wp--preset--color--unitone-text-black);
 	padding: var(--unitone--s-1);
 
 	ul {
@@ -545,6 +520,7 @@ fieldset.submit {
     padding: 0 var(--unitone--s-2);
 	}
 
+	// Topic / Reply form
 	> div:not([class]) {
 		display: flex;
 		flex-direction: column;
@@ -560,6 +536,14 @@ fieldset.submit {
 				}
 			}
 		}
+	}
+
+	// Login form
+	> .bbp-username,
+	> .bbp-password {
+		display: flex;
+		flex-direction: column;
+		gap: var(--unitone--s-2);
 	}
 }
 
@@ -691,5 +675,26 @@ fieldset.submit {
 		--unitone--font-size: 0;
 
 		display: block;
+	}
+}
+
+/* ==============================
+ * Components
+============================== */
+.unitone-bbpress-integrator-ic-check {
+	position: relative;
+	padding-left: .8em;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%) rotate(-45deg);
+		display: inline-block;
+		height: .3em;
+		width: .5em;
+		border-left: 2px solid black;
+		border-bottom: 2px solid black;
 	}
 }
