@@ -176,6 +176,41 @@
 		> * + * {
 			margin-top: var(--unitone--s1);
 		}
+
+		> .wp-oembed-blog-card {
+			background-color: var(--wp--preset--color--white);
+			border-radius: var(--unitone--global--border-radius);
+			box-shadow: var(--unitone--global--box-shadow);
+			color: var(--wp--preset--color--unitone-text-black);
+			overflow: hidden;
+
+			> a {
+				padding: var(--unitone--global--text-gap);
+			}
+		}
+
+		> pre {
+			border: none;
+			border-radius: 0;
+			overflow: auto;
+			padding: var(--unitone--global--text-gap);
+			background-color: var(--wp--preset--color--unitone-text);
+			color: var(--wp--preset--color--unitone-text-alt);
+			font-family: Menlo, Consolas, monaco, monospace;
+
+			> code {
+				background-color: transparent;
+				border: none;
+				border-radius: 0;
+				color: inherit;
+				font-size: inherit;
+				padding: 0;
+				white-space: inherit;
+				display: block;
+				font-family: inherit;
+				overflow-wrap: break-word;
+			}
+		}
 	}
 
 	[class*=loop-item-] {
