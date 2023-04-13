@@ -211,6 +211,22 @@
 				overflow-wrap: break-word;
 			}
 		}
+
+		> blockquote {
+			padding: 0;
+			padding-left: var(--unitone--global--text-gap);
+			border-left: 0.25em solid var(--wp--preset--color--unitone-text);
+			font-style: italic;
+
+			> * {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+
+			> * + * {
+				margin-top: var(--unitone--global--text-gap);
+			}
+		}
 	}
 
 	[class*=loop-item-] {
