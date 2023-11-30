@@ -100,11 +100,6 @@
 		}
 	}
 
-	.bbp-forum-title,
-	.bbp-topic-title > a {
-		--unitone--font-size: 1;
-	}
-
 	&.status-closed .bbp-topic-title .bbp-topic-permalink {
 		color: inherit;
 	}
@@ -115,6 +110,15 @@
 	.bbp-topic-reply-count {
 		display: flex;
 		justify-content: center;
+	}
+}
+
+.bbp-forums [class*=loop-item-] > .bbp-forum-info,
+.bbp-topics [class*=loop-item-] > .bbp-topic-title {
+	--unitone--font-size: 1;
+
+	.bbp-forum-content {
+		--unitone--font-size: -1;
 	}
 }
 
@@ -725,8 +729,9 @@ fieldset.submit {
 	}
 
 	.bbp-forum-title {
-		--unitone--font-size: 0;
+		// --unitone--font-size: 0;
 
+		font-size: 1rem;
 		display: block;
 	}
 }

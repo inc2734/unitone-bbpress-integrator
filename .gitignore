@@ -11,3 +11,4 @@ unitone-bbpress-integrator.zip
 /.themes/
 /.export/*
 .wp-env.override.json
+.phpunit.result.cache
