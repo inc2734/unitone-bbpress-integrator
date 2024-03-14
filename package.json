@@ -1,22 +1,24 @@
 {
-	"author": "inc2734",
-	"license": "GPL-2.0+",
-	"dependencies": {
-		"postcss": "^8.4.31",
-		"sass-basis": "^18.2.2"
+	"engines": {
+		"node": ">=20.10.0",
+		"npm": ">=10.2.3"
+	},
+	"volta": {
+		"node": "20.11.1"
 	},
 	"devDependencies": {
-		"@wordpress/env": "^8.13.0",
-		"@wordpress/scripts": "^26.18.0",
-		"autoprefixer": "^10.4.16",
+		"@wordpress/env": "^9.5.0",
+		"@wordpress/scripts": "^27.4.0",
+		"autoprefixer": "^10.4.18",
 		"cpy-cli": "^5.0.0",
-		"cssnano": "^6.0.1",
+		"cssnano": "^6.1.0",
 		"npm-run-all": "^4.1.5",
-		"postcss": "^8.4.31",
-		"postcss-cli": "^10.1.0",
-		"postcss-import": "^15.1.0",
+		"postcss": "^8.4.35",
+		"postcss-cli": "^11.0.0",
+		"postcss-import": "^16.0.1",
 		"rimraf": "^5.0.5",
-		"sass": "^1.69.5"
+		"sass": "^1.72.0",
+		"sass-basis": "^18.2.2"
 	},
 	"scripts": {
 		"export:wp-content:themes": "npm run cli cp -- -r wp-content/themes .export/wp-content",
@@ -56,8 +58,5 @@
 		"zip": "npm run clean:zip && npm run zip:pack && npm run zip:archive",
 		"make-pot": "npm run wp i18n -- make-pot . ./languages/unitone-bbpress-integrator.pot --exclude=.*,src'",
 		"make-json": "rimraf languages/*.json && npm run wp i18n -- make-json ./languages/unitone-bbpress-integrator-ja.po --no-purge'"
-	},
-	"volta": {
-		"node": "16.20.2"
 	}
 }
