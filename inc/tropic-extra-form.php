@@ -10,7 +10,7 @@
  */
 add_filter(
 	'render_block',
-	function( $block_content, $block ) {
+	function ( $block_content, $block ) {
 		if ( 'core/template-part' === $block['blockName'] && 'contents-bbpress' === $block['attrs']['slug'] ) {
 			$block_content = preg_replace(
 				'|(<input name="bbp_topic_subscribers".+?</label>)|ms',

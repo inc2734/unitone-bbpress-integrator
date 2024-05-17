@@ -100,7 +100,6 @@
 
 				<?php
 				while ( $widget_query->have_posts() ) :
-
 					$widget_query->the_post();
 					$topic_id    = bbp_get_topic_id( $widget_query->post->ID );
 					$author_link = '';

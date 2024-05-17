@@ -42,7 +42,7 @@ function unitone_bbpress_integrator_send_new_topic( $post_id, $post, $update ) {
 		get_the_author_meta( 'display_name', $post->post_author )
 	);
 	$body .= "\n\n";
-	$body .= strip_tags( $post->post_content );
+	$body .= wp_strip_all_tags( $post->post_content );
 	$body .= "\n\n";
 	$body .= get_permalink( $post_id );
 

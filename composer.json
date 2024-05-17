@@ -10,17 +10,18 @@
 		}
 	],
 	"require-dev": {
-		"wp-coding-standards/wpcs": "^2.3",
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
-		"yoast/phpunit-polyfills": "^1.0"
+		"wp-coding-standards/wpcs": "^3.1",
+		"phpcompatibility/phpcompatibility-wp": "*",
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"yoast/phpunit-polyfills": "^2.0"
 	},
 	"require": {
 		"php": ">=7.4",
 		"inc2734/wp-github-plugin-updater": "^3.1"
 	},
 	"scripts" :{
-		"lint": "./vendor/squizlabs/php_codesniffer/bin/phpcs",
-		"format": "./vendor/squizlabs/php_codesniffer/bin/phpcbf",
+		"format": "phpcbf --standard=.phpcs.xml.dist --report-summary --report-source",
+		"lint": "phpcs --standard=.phpcs.xml.dist",
 		"install-theme": "rm -rf ./.themes && mkdir ./.themes && wget -P ./.themes https://github.com/inc2734/unitone/archive/main.zip && unzip -o -qq ./.themes/main.zip -d ./.themes && mv ./.themes/unitone-main ./.themes/unitone && cd .themes/unitone && composer install --no-dev",
 		"install-plugin": "rm -rf ./.plugins && mkdir ./.plugins && wget -P ./.plugins https://downloads.wordpress.org/plugin/bbpress.zip && unzip -o -qq ./.plugins/bbpress -d ./.plugins"
 	},

@@ -10,7 +10,7 @@
  */
 add_action(
 	'wp_enqueue_scripts',
-	function() {
+	function () {
 		wp_dequeue_style( 'bbp-default' );
 	}
 );
@@ -20,7 +20,7 @@ add_action(
  */
 add_action(
 	'enqueue_block_assets',
-	function() {
+	function () {
 		wp_enqueue_style(
 			'unitone/bbpress-integrator',
 			UNITONE_BBPRESS_INTEGRATOR_URL . '/dist/css/app.css',

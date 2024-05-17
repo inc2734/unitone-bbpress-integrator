@@ -13,7 +13,7 @@
  */
 add_filter(
 	'document_title_parts',
-	function( $title ) {
+	function ( $title ) {
 		if ( ! is_bbpress() ) {
 			return $title;
 		}

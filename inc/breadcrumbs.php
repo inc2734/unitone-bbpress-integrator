@@ -15,7 +15,7 @@ add_filter( 'bbp_get_breadcrumb', '__return_null' );
  */
 add_filter(
 	'unitone_breadcrumbs',
-	function( $breadcrumbs ) {
+	function ( $breadcrumbs ) {
 		if ( ! is_bbpress() ) {
 			return $breadcrumbs;
 		}
@@ -50,7 +50,7 @@ add_filter(
 			}
 
 			return $breadcrumbs;
-		};
+		}
 
 		/**
 		 * Update breadcrumbs for topic edit.
@@ -66,7 +66,7 @@ add_filter(
 			);
 
 			return $breadcrumbs;
-		};
+		}
 
 		/**
 		 * Update breadcrumbs for search.
@@ -90,7 +90,7 @@ add_filter(
 			);
 
 			return $breadcrumbs;
-		};
+		}
 
 		/**
 		 * Update breadcrumbs for single user.
@@ -110,7 +110,7 @@ add_filter(
 			);
 
 			return $breadcrumbs;
-		};
+		}
 
 		/**
 		 * Update breadcrumbs for topic tag.
@@ -129,7 +129,7 @@ add_filter(
 			array_splice( $breadcrumbs, -1, 0, $adding_items );
 
 			return $breadcrumbs;
-		};
+		}
 
 		/**
 		 * Update breadcrumbs for topic archive.
@@ -148,7 +148,7 @@ add_filter(
 			array_splice( $breadcrumbs, -1, 0, $adding_items );
 
 			return $breadcrumbs;
-		};
+		}
 
 		/**
 		 * Update breadcrumbs for single reply.
@@ -184,7 +184,7 @@ add_filter(
 			);
 
 			return $breadcrumbs;
-		};
+		}
 
 		/**
 		 * Update breadcrumbs for reply edit.
@@ -195,7 +195,7 @@ add_filter(
 		function unitone_bbpress_integrator_beradcrumbs_reply_edit( $breadcrumbs ) {
 			$breadcrumbs = unitone_bbpress_integrator_beradcrumbs_single_reply( $breadcrumbs );
 			return $breadcrumbs;
-		};
+		}
 
 		/**
 		 * Update breadcrumbs for no-replies.
@@ -215,7 +215,7 @@ add_filter(
 			);
 
 			return $breadcrumbs;
-		};
+		}
 
 		/**
 		 * Update breadcrumbs for popular.
@@ -235,7 +235,7 @@ add_filter(
 			);
 
 			return $breadcrumbs;
-		};
+		}
 
 		if ( bbp_is_single_topic() ) {
 			$breadcrumbs = unitone_bbpress_integrator_beradcrumbs_single_topic( $breadcrumbs );

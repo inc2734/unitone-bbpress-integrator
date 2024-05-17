@@ -10,7 +10,7 @@
  */
 add_filter(
 	'bbp_get_topic_title',
-	function( $title, $topic_id ) {
+	function ( $title, $topic_id ) {
 		if ( 'closed' === get_post_status( $topic_id ) ) {
 			return '<span class="unitone-bbpress-integrator-ic-check"></span>' . $title;
 		}
@@ -25,7 +25,7 @@ add_filter(
  */
 add_action(
 	'bbp_template_before_single_topic',
-	function() {
+	function () {
 		$close_link = unitone_bbpress_integrator_close_link();
 		if ( ! $close_link ) {
 			return;
@@ -43,7 +43,7 @@ add_action(
  */
 add_action(
 	'bbp_theme_after_reply_form_submit_button',
-	function() {
+	function () {
 		$close_link = unitone_bbpress_integrator_close_link();
 		if ( ! $close_link ) {
 			return;
