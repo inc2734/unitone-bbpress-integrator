@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-require_once( './wp-load.php' );
+require_once( '../../../wp-load.php' );
 
 $mo_files = glob( __DIR__ . '/../languages/*.mo' );
 foreach ( $mo_files as $mo_file ) {
@@ -14,3 +14,4 @@ foreach ( $mo_files as $mo_file ) {
 		file_put_contents( path_join( dirname( $mo_file ), basename( $mo_file, '.mo' ) ) . '.l10n.php', $mo );
 	}
 }
+
