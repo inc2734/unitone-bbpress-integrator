@@ -1,3 +1,5 @@
+@use 'mixin';
+
 .entry-content .bbpress-wrapper {
   max-width: var(--wp--custom--container-max-width);
 
@@ -497,19 +499,7 @@ fieldset.submit {
 [class^="bbp-"] .button,
 .subscription-toggle,
 .favorite-toggle {
-	display: inline-flex;
-	align-items: center;
-	gap: calc(var(--unitone--s-2) / 2);
-	background-color: var(--wp--preset--color--unitone-bright-gray);
-	border: 1px solid var(--wp--preset--color--unitone-gray);
-	border-radius: var(--unitone--global--border-radius);
-	color: inherit;
-	padding: calc(var(--unitone--s-2) / 1.5) var(--unitone--s-2);
-	text-decoration: none;
-
-	&:active {
-		border-color: var(--wp--preset--color--unitone-dark-gray);
-	}
+	@include mixin.button;
 }
 
 // Editor

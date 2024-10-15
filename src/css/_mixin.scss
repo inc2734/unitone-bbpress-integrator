@@ -1,0 +1,16 @@
+@mixin button() {
+	display: inline-flex;
+	align-items: center;
+	gap: calc(var(--unitone--s-2) / 2);
+	background-color: var(--wp--preset--color--unitone-bright-gray);
+	border: 1px solid var(--wp--preset--color--unitone-gray);
+	border-radius: var(--unitone--global--border-radius);
+	color: inherit;
+	cursor: pointer;
+	padding: calc(var(--unitone--s-2) / 2) calc(var(--unitone--s-1) / 1.5);
+	text-decoration: none;
+
+	&:active {
+		border-color: var(--wp--preset--color--unitone-dark-gray);
+	}
+}

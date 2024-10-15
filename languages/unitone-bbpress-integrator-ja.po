@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: unitone bbPress integrator 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/unitone-bbpress-"
 "integrator\n"
-"POT-Creation-Date: 2022-11-22T09:00:37+00:00\n"
-"PO-Revision-Date: 2022-11-22 18:00+0900\n"
+"POT-Creation-Date: 2024-10-15T02:16:57+00:00\n"
+"PO-Revision-Date: 2024-10-15 11:17+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.5\n"
 "X-Domain: unitone-bbpress-integrator\n"
 
 #. Plugin Name of the plugin
@@ -60,7 +60,8 @@ msgstr "登録"
 msgid "Lost Password"
 msgstr "パスワード紛失"
 
-#: dist/blocks/topics/render.php:125
+#. translators: %1$s: Author name
+#: dist/blocks/topics/render.php:127
 msgctxt "widgets"
 msgid "by %1$s"
 msgstr "by %1$s"
@@ -81,6 +82,22 @@ msgstr "返信がないトピック"
 #: inc/breadcrumbs.php:233 dist/blocks/topics/index.js:1
 msgid "Popular Topics"
 msgstr "人気のトピック"
+
+#: inc/like.php:158
+msgid "Like this reply"
+msgstr "この返信へのいいね"
+
+#: inc/like.php:169
+msgid "Who liked:"
+msgstr "いいねをした人："
+
+#: inc/like.php:172
+msgid "No user"
+msgstr "いません"
+
+#: inc/like.php:266
+msgid "Total likes (Replies)"
+msgstr "総いいね数（返信）"
 
 #. translators: 1: Topic title
 #: inc/notice.php:35
