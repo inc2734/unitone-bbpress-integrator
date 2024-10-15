@@ -192,7 +192,7 @@ add_action(
  */
 add_action(
 	'bbp_theme_before_reply_author_details',
-	function() {
+	function () {
 		add_filter(
 			'bbp_get_reply_author_link',
 			'unitone_bbpress_integrator_add_user_likes_for_replies_user',
@@ -207,7 +207,7 @@ add_action(
  */
 add_action(
 	'bbp_theme_after_reply_author_details',
-	function() {
+	function () {
 		remove_filter(
 			'bbp_get_reply_author_link',
 			'unitone_bbpress_integrator_add_user_likes_for_replies_user',
@@ -256,7 +256,7 @@ function unitone_bbpress_integrator_add_user_likes_for_replies_user( $author_lin
  */
 add_action(
 	'bbp_template_after_user_profile',
-	function() {
+	function () {
 		?>
 		<p>
 			<?php
