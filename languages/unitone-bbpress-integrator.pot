@@ -2,14 +2,14 @@
 # This file is distributed under the GPL2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: unitone bbPress integrator 0.4.1\n"
+"Project-Id-Version: unitone bbPress integrator 0.5.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/unitone-bbpress-integrator\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-10-15T02:16:57+00:00\n"
+"POT-Creation-Date: 2024-11-04T13:22:38+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.9.0\n"
 "X-Domain: unitone-bbpress-integrator\n"
@@ -125,6 +125,58 @@ msgstr ""
 msgid "【%1$s】Added new user using %2$s."
 msgstr ""
 
+#: inc/templates.php:46
+msgid "Main Area (One Column) for bbPress"
+msgstr ""
+
+#: inc/templates.php:52
+msgid "Main Area (One Column / Page Header (Image)) for bbPress"
+msgstr ""
+
+#: inc/templates.php:58
+msgid "Main Area (Right Sidebar / Page Header (Image)) for bbPress"
+msgstr ""
+
+#: inc/templates.php:64
+msgid "Main Area (Right Sidebar) for bbPress"
+msgstr ""
+
+#: inc/templates.php:70
+msgid "Page Header (Image) for bbPress"
+msgstr ""
+
+#: inc/templates.php:76
+msgid "Page Header for bbPress"
+msgstr ""
+
+#: inc/templates.php:83
+msgid "bbPress: Left Header / Page Header (Image)"
+msgstr ""
+
+#: inc/templates.php:91
+msgid "bbPress: Left Header"
+msgstr ""
+
+#: inc/templates.php:99
+msgid "bbPress: One Column / Page Header (Image)"
+msgstr ""
+
+#: inc/templates.php:107
+msgid "bbPress: One Column"
+msgstr ""
+
+#: inc/templates.php:115
+msgid "bbPress: Right Sidebar / Page Header (Image)"
+msgstr ""
+
+#: inc/templates.php:123
+msgid "bbPress: Right Sidebar"
+msgstr ""
+
+#: inc/templates.php:155
+msgid "for bbPress"
+msgstr ""
+
 #: inc/topic-close-link.php:76
 msgid "Close this topic"
 msgstr ""
@@ -133,11 +185,16 @@ msgstr ""
 msgid "Open this topic"
 msgstr ""
 
-#: unitone-bbpress-integrator.php:48
-msgid "[unitone bbPress integrator] Needs the unitone."
+#: unitone-bbpress-integrator.php:51
+msgid "[unitone bbPress integrator] Needs unitone theme."
 msgstr ""
 
-#: unitone-bbpress-integrator.php:66
+#. translators: %1$s: version.
+#: unitone-bbpress-integrator.php:81
+msgid "[unitone bbPress Integrator] Needs unitone theme %1$s or more."
+msgstr ""
+
+#: unitone-bbpress-integrator.php:104
 msgid "[unitone bbPress integrator] Needs the bbPress."
 msgstr ""
 

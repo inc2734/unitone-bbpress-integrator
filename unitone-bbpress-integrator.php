@@ -2,9 +2,10 @@
 /**
  * Plugin name: unitone bbPress integrator
  * Version: 0.5.0
- * Tested up to: 6.6
- * Requires at least: 6.6
+ * Tested up to: 6.7-rc1
+ * Requires at least: 6.7-rc1
  * Requires PHP: 7.4
+ * Requires unitone: 15.0.0-beta1
  * Description: This plugin makes unitone beautifully display bbPress and adds some features.
  * Author: Takashi Kitajima
  * Author URI: https://2inc.org
@@ -37,6 +38,8 @@ class Bootstrap {
 	public function _bootstrap() {
 		load_plugin_textdomain( 'unitone-bbpress-integrator', false, basename( __DIR__ ) . '/languages' );
 
+		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/updater.php';
+
 		$theme = wp_get_theme( get_template() );
 		if ( 'unitone' !== $theme->template ) {
 			add_action(
@@ -45,7 +48,7 @@ class Bootstrap {
 					?>
 					<div class="notice notice-warning is-dismissible">
 						<p>
-							<?php esc_html_e( '[unitone bbPress integrator] Needs the unitone.', 'unitone-bbpress-integrator' ); ?>
+							<?php esc_html_e( '[unitone bbPress integrator] Needs unitone theme.', 'unitone-bbpress-integrator' ); ?>
 						</p>
 					</div>
 					<?php
@@ -54,7 +57,42 @@ class Bootstrap {
 			return;
 		}
 
-		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/updater.php';
+		$data = get_file_data(
+			__FILE__,
+			array(
+				'RequiresUnitone' => 'Requires unitone',
+			)
+		);
+
+		if (
+			isset( $data['RequiresUnitone'] ) &&
+			version_compare( $theme->get( 'Version' ), $data['RequiresUnitone'], '<' )
+		) {
+			add_action(
+				'admin_notices',
+				function () use ( $data ) {
+					?>
+					<div class="notice notice-warning is-dismissible">
+						<p>
+							<?php
+							echo esc_html(
+								sprintf(
+									// translators: %1$s: version.
+									__(
+										'[unitone bbPress Integrator] Needs unitone theme %1$s or more.',
+										'unitone-bbpress-integrator'
+									),
+									'v' . $data['RequiresUnitone']
+								)
+							);
+							?>
+						</p>
+					</div>
+					<?php
+				}
+			);
+			return;
+		}
 
 		if ( ! class_exists( 'bbPress' ) ) {
 			add_action(
@@ -80,6 +118,7 @@ class Bootstrap {
 		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/like.php';
 		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/notice.php';
 		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/subscribe-button.php';
+		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/templates.php';
 		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/topic-close-link.php';
 		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/tropic-extra-form.php';
 	}

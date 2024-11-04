@@ -47,6 +47,8 @@
 		<exclude name="Generic.Commenting.DocComment.MissingShort"></exclude>
 		<exclude name="Generic.Commenting.DocComment.ShortNotCapital"></exclude>
 		<exclude name="PSR2.Methods.MethodDeclaration.Underscore"></exclude>
+
+		<exclude name="WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents"></exclude>
 	</rule>
 
 	<rule ref="WordPress.WhiteSpace.ControlStructureSpacing">
