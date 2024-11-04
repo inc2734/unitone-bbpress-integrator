@@ -36,8 +36,6 @@ class Bootstrap {
 	 * Bootstrap.
 	 */
 	public function _bootstrap() {
-		load_plugin_textdomain( 'unitone-bbpress-integrator', false, basename( __DIR__ ) . '/languages' );
-
 		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/updater.php';
 
 		$theme = wp_get_theme( get_template() );
@@ -115,6 +113,7 @@ class Bootstrap {
 		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/breadcrumbs.php';
 		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/content.php';
 		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/document-title.php';
+		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/i18n.php';
 		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/like.php';
 		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/notice.php';
 		require UNITONE_BBPRESS_INTEGRATOR_PATH . '/inc/subscribe-button.php';
