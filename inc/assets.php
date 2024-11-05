@@ -19,8 +19,27 @@ add_action(
  * Enqueue assets
  */
 add_action(
+	'wp_enqueue_scripts',
+	function () {
+		wp_enqueue_style(
+			'unitone/bbpress-integrator',
+			UNITONE_BBPRESS_INTEGRATOR_URL . '/dist/css/app.css',
+			array( 'unitone' ),
+			filemtime( UNITONE_BBPRESS_INTEGRATOR_PATH . '/dist/css/app.css' )
+		);
+	}
+);
+
+/**
+ * Enqueue editor assets
+ */
+add_action(
 	'enqueue_block_assets',
 	function () {
+		if ( ! is_admin() ) {
+			return;
+		}
+
 		wp_enqueue_style(
 			'unitone/bbpress-integrator',
 			UNITONE_BBPRESS_INTEGRATOR_URL . '/dist/css/app.css',
