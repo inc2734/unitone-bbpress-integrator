@@ -7,17 +7,17 @@
 		"node": "20.11.1"
 	},
 	"devDependencies": {
-		"@wordpress/env": "^10.11.0",
-		"@wordpress/scripts": "^30.4.0",
+		"@wordpress/env": "^10.17.0",
+		"@wordpress/scripts": "^30.10.0",
 		"autoprefixer": "^10.4.20",
 		"cpy-cli": "^5.0.0",
 		"cssnano": "^7.0.6",
 		"npm-run-all": "^4.1.5",
-		"postcss": "^8.4.47",
+		"postcss": "^8.5.1",
 		"postcss-cli": "^11.0.0",
 		"postcss-import": "^16.1.0",
 		"rimraf": "^6.0.1",
-		"sass": "^1.80.6"
+		"sass": "^1.84.0"
 	},
 	"scripts": {
 		"export:wp-content:themes": "npm run cli cp -- -r ../../themes .export/wp-content",
@@ -52,9 +52,9 @@
 		"css:app": "sass --no-source-map src/css/app.scss:dist/css/app.css && postcss dist/css/app.css -r",
 		"css:like": "sass --no-source-map src/css/like.scss:dist/css/like.css && postcss dist/css/like.css -r",
 		"css": "npm run clean:css && npm-run-all -p css:*",
-		"js:like": "wp-scripts build src/js/like.js --output-path=dist/js --webpack-src-dir=dist/js",
+		"js:like": "wp-scripts build src/js/like.js --output-path=dist/js",
 		"js": "npm run clean:js && npm run format:js && run-p js:*",
-		"blocks:build": "rimraf dist/blocks && wp-scripts build --output-path=dist",
+		"blocks:build": "rimraf dist/blocks && wp-scripts build --output-path=dist --experimental-modules",
 		"blocks:php": "cpy \"src/blocks/**/*.php\" \"dist/blocks\"",
 		"blocks": "run-s format:blocks blocks:build blocks:php",
 		"build": "npm-run-all -p css blocks js",
