@@ -14,6 +14,8 @@ export default function ( { attributes, setAttributes } ) {
 					title={ __( 'General', 'unitone-bbpress-integrator' ) }
 				>
 					<TextControl
+						__next40pxDefaultSize
+						__nextHasNoMarginBottom
 						label={ __( 'Title', 'unitone-bbpress-integrator' ) }
 						value={ title }
 						onChange={ ( newAttribute ) => {

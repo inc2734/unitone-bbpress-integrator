@@ -22,6 +22,8 @@ export default function ( { attributes, setAttributes } ) {
 					title={ __( 'General', 'unitone-bbpress-integrator' ) }
 				>
 					<TextControl
+						__next40pxDefaultSize
+						__nextHasNoMarginBottom
 						label={ __( 'Title', 'unitone-bbpress-integrator' ) }
 						value={ title }
 						onChange={ ( newAttribute ) => {
@@ -32,6 +34,8 @@ export default function ( { attributes, setAttributes } ) {
 					/>
 
 					<RangeControl
+						__next40pxDefaultSize
+						__nextHasNoMarginBottom
 						label={ __(
 							'Maximum topics to show',
 							'unitone-bbpress-integrator'
@@ -49,6 +53,8 @@ export default function ( { attributes, setAttributes } ) {
 					/>
 
 					<TextControl
+						__next40pxDefaultSize
+						__nextHasNoMarginBottom
 						label={ __(
 							'Parent Forum ID',
 							'unitone-bbpress-integrator'
@@ -66,6 +72,7 @@ export default function ( { attributes, setAttributes } ) {
 					/>
 
 					<ToggleControl
+						__nextHasNoMarginBottom
 						label={ __(
 							'Show post date',
 							'unitone-bbpress-integrator'
@@ -79,6 +86,7 @@ export default function ( { attributes, setAttributes } ) {
 					/>
 
 					<ToggleControl
+						__nextHasNoMarginBottom
 						label={ __(
 							'Show topic author',
 							'unitone-bbpress-integrator'
@@ -92,6 +100,8 @@ export default function ( { attributes, setAttributes } ) {
 					/>
 
 					<SelectControl
+						__next40pxDefaultSize
+						__nextHasNoMarginBottom
 						label={ __( 'Order By', 'unitone-bbpress-integrator' ) }
 						value={ orderBy }
 						options={ [

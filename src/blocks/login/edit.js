@@ -14,6 +14,8 @@ export default function ( { attributes, setAttributes } ) {
 					title={ __( 'General', 'unitone-bbpress-integrator' ) }
 				>
 					<TextControl
+						__next40pxDefaultSize
+						__nextHasNoMarginBottom
 						label={ __( 'Title', 'unitone-bbpress-integrator' ) }
 						value={ title }
 						onChange={ ( newAttribute ) => {
@@ -24,6 +26,8 @@ export default function ( { attributes, setAttributes } ) {
 					/>
 
 					<TextControl
+						__next40pxDefaultSize
+						__nextHasNoMarginBottom
 						label={ __(
 							'Register URI',
 							'unitone-bbpress-integrator'
@@ -37,6 +41,8 @@ export default function ( { attributes, setAttributes } ) {
 					/>
 
 					<TextControl
+						__next40pxDefaultSize
+						__nextHasNoMarginBottom
 						label={ __(
 							'Lost Password URI',
 							'unitone-bbpress-integrator'
