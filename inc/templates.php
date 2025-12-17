@@ -96,6 +96,22 @@ add_action(
 				'path'          => UNITONE_BBPRESS_INTEGRATOR_PATH . '/patterns/template/left-header.php',
 			),
 			array(
+				'title'         => __( 'bbPress: Left Header (Thin) / Page Header (Image)', 'unitone-bbpress-integrator' ),
+				'slug'          => 'unitone/template/bbpress/left-header-thin-page-header-image',
+				'categories'    => array( 'unitone-templates' ),
+				'templateTypes' => array( 'bbpress' ),
+				'inserter'      => false,
+				'path'          => UNITONE_BBPRESS_INTEGRATOR_PATH . '/patterns/template/left-header-thin-page-header-image.php',
+			),
+			array(
+				'title'         => __( 'bbPress: Left Header (Thin)', 'unitone-bbpress-integrator' ),
+				'slug'          => 'unitone/template/bbpress/left-header-thin',
+				'categories'    => array( 'unitone-templates' ),
+				'templateTypes' => array( 'bbpress' ),
+				'inserter'      => false,
+				'path'          => UNITONE_BBPRESS_INTEGRATOR_PATH . '/patterns/template/left-header-thin.php',
+			),
+			array(
 				'title'         => __( 'bbPress: One Column / Page Header (Image)', 'unitone-bbpress-integrator' ),
 				'slug'          => 'unitone/template/bbpress/one-column-page-header-image',
 				'categories'    => array( 'unitone-templates' ),
