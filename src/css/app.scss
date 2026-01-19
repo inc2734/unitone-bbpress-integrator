@@ -615,8 +615,40 @@ fieldset.submit {
 }
 
 // Pagination
+.bbp-pagination {
+	display: grid;
+	gap: var(--unitone--s-2);
+}
 .bbp-pagination-links:empty {
 	display: none;
+}
+.bbp-pagination-links {
+	display: flex;
+	gap: var(--unitone--s-2);
+
+	.page-numbers {
+		display: grid;
+		place-content: center;
+		width: 2rem;
+		height: 2rem;
+		padding: var(--unitone--p-1);
+		border: 1px solid var(--wp--preset--color--unitone-light-gray);
+		color: currentColor;
+		text-decoration: none;
+
+		&.current {
+			background-color: var(--wp--preset--color--unitone-bright-gray);
+		}
+
+		&:focus-visible {
+			background-color: var(--wp--preset--color--unitone-bright-gray);
+		}
+	}
+	@media (any-hover: hover) {
+		.page-numbers:hover {
+			background-color: var(--wp--preset--color--unitone-bright-gray);
+		}
+	}
 }
 
 /* ==============================
