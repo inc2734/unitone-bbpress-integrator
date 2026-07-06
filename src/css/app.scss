@@ -32,13 +32,12 @@
 .bbp-replies,
 .bbp-search-results {
 	> .bbp-header {
-		--unitone--font-size: -1;
-
 		margin: 0;
 		background-color: var(--wp--preset--color--unitone-bright-gray);
 		padding: var(--unitone--s-1) var(--unitone--s1);
 		display: flex;
 		gap: var(--unitone--s1);
+		font-size: var(--unitone--font-size-s);
 
 		.forum-titles {
 			flex: 1 1 auto;
@@ -78,7 +77,7 @@
 .forum-titles,
 .bbp-forums [class*=loop-item-],
 .bbp-topics [class*=loop-item-] {
-	--unitone--font-size: -1;
+	font-size: var(--unitone--font-size-s);
 
 	> * {
 		margin: 0;
@@ -117,10 +116,10 @@
 
 .bbp-forums [class*=loop-item-] > .bbp-forum-info,
 .bbp-topics [class*=loop-item-] > .bbp-topic-title {
-	--unitone--font-size: 1;
+	font-size: var(--unitone--font-size-l);
 
 	.bbp-forum-content {
-		--unitone--font-size: -1;
+		font-size: var(--unitone--font-size-s);
 	}
 }
 
@@ -149,7 +148,7 @@
 	gap: var(--unitone--s-2);
 
 	.bbp-topic-meta {
-		--unitone--font-size: -1;
+		font-size: var(--unitone--font-size-s);
 
 		flex-wrap: wrap;
 	}
@@ -250,7 +249,7 @@
 	// Avatar
 	.bbp-reply-author,
 	.bbp-topic-author {
-		--unitone--font-size: -1;
+		font-size: var(--unitone--font-size-s);
 
 		flex: 0 0 100px;
 
@@ -268,7 +267,7 @@
 
 // Reply header (topic meta)
 .bbp-reply-header {
-	--unitone--font-size: -1;
+	font-size: var(--unitone--font-size-s);
 
 	background-color: var(--wp--preset--color--unitone-bright-gray);
 	padding: var(--unitone--s-1) var(--unitone--s1);
@@ -306,7 +305,7 @@
 // Topic header (topic meta)
 .bbp-forum-header,
 .bbp-topic-header {
-	--unitone--font-size: -1;
+	font-size: var(--unitone--font-size-s);
 
 	background-color: var(--wp--preset--color--unitone-bright-gray);
 	padding: var(--unitone--s-1) var(--unitone--s-1);
@@ -316,7 +315,7 @@
 	}
 
 	h3 {
-		--unitone--font-size: 2;
+		font-size: var(--unitone--font-size-xl);
 	}
 }
 
@@ -369,7 +368,7 @@
 }
 .bbp-user-section {
 	> h3 {
-		--unitone--font-size: 2;
+		font-size: var(--unitone--font-size-xl);
 	}
 
 	> * + * {
@@ -482,7 +481,7 @@
 // Password weak
 .pw-weak {
 	.description {
-		--unitone--font-size: -1;
+		font-size: var(--unitone--font-size-s);
 	}
 }
 
@@ -517,7 +516,7 @@ fieldset.submit {
 
 // Heading
 .bbpress-wrapper .entry-title {
-	--unitone--font-size: 2;
+	font-size: var(--unitone--font-size-xl);
 }
 
 // Author link (author name + avatar)
@@ -563,7 +562,7 @@ fieldset.submit {
 	gap: var(--unitone--s1);
 
 	legend {
-		--unitone--font-size: 1;
+		font-size: var(--unitone--font-size-l);
 
 		display: flex;
     align-items: center;
@@ -750,14 +749,14 @@ fieldset.submit {
 	}
 
 	li {
-		--unitone--font-size: -2;
+		font-size: var(--unitone--font-size-xs);
 
 		margin-left: 0;
 		padding-left: 0;
 	}
 
 	.bbp-forum-title {
-		// --unitone--font-size: 0;
+		// font-size: var(--unitone--font-size-m);
 
 		font-size: 1rem;
 		display: block;
